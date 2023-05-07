@@ -4,6 +4,10 @@ Author: Ignais La Paz Trujillo
 Class:Blockchain
 """
 
+import json
+import pprint
+from datetime import datetime
+from time import time
 from .crypto_currency import Block
 
 class Blockchain:
@@ -15,4 +19,12 @@ class Blockchain:
         self.pending_transaction = []
         self.reward = 10
 
-    
+    #First Block of the chain
+    def genesis_block(self):
+        genesis_block = Block(str(datetime.now()), "I'm the first block")
+        return genesis_block
+
+    #Last Block of the chain
+    def last_block(self):
+        return self.chain[-1]
+

@@ -4,10 +4,6 @@ Author: Ignais La Paz Trujillo
 Class: Block
 """
 import hashlib
-import json
-import pprint
-from datetime import datetime
-from time import time
 
 #Class Block
 
