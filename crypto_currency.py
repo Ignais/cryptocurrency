@@ -1,6 +1,7 @@
 """
 Project: New Curency
 Author: Ignais La Paz Trujillo
+Class: Block
 """
 import hashlib
 import json
