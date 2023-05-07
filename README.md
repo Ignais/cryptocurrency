@@ -1,2 +1,2 @@
 # cryptocurrency
-Blockchain course. Creation that my owner cryptocurrency
+Blockchain course. Creation that my own cryptocurrency
