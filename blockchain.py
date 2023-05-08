@@ -8,13 +8,13 @@ import json
 import pprint
 from datetime import datetime
 from time import time
-from .crypto_currency import Block
-from .transaction import Transaction
+from crypto_currency import Block
+from transaction import Transaction
 class Blockchain:
 
     #Constructor
     def __init__(self):
-        self.chain = [self.genesis_block()]
+        self.chain = [self.get_genesis_block()]
         self.difficulty = 5
         self.pending_transaction = []
         self.reward = 10
@@ -37,7 +37,7 @@ class Blockchain:
         for trans in new_block.transaction:
             temp = json.dumps(trans.__dict__, indent=5, separators=(',', ':'))
             test_chain.append(temp)
-        pprint(test_chain)
+        pprint.pprint(test_chain)
 
         self.chain.append(new_block)
         reward = Transaction("System", miner_address, self.reward)
