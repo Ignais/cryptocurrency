@@ -64,8 +64,8 @@ class Blockchain:
                 continue
             for trans in block.transaction:
                 if trans.from_wallet == wallet_address:
-                    balance -= transaction.value
+                    balance -= trans.value
                 if trans.to_wallet == wallet_address:
-                    balance += transaction.value
+                    balance += trans.value
 
         return balance
