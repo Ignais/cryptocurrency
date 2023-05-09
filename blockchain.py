@@ -13,11 +13,11 @@ from transaction import Transaction
 class Blockchain:
 
     #Constructor
-    def __init__(self):
-        self.chain = [self.get_genesis_block()]
-        self.difficulty = 5
+    def __init__(self, difficulty: int = 5, reward: int | float = 10):
+        self.chain = []
+        self.difficulty = difficulty
         self.pending_transaction = []
-        self.reward = 10
+        self.reward = reward
 
     #First Block of the chain
     def get_genesis_block(self):
