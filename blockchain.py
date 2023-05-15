@@ -13,7 +13,8 @@ from transaction import Transaction
 class Blockchain:
 
     #Constructor
-    def __init__(self, difficulty: int = 5, reward: int | float = 10):
+    def __init__(self, name, difficulty: int = 5, reward: int | float = 10):
+        self.name = name
         self.chain = []
         self.difficulty = difficulty
         self.pending_transaction = []
